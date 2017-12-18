@@ -8,47 +8,50 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+
 public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.button_change_place)
+    Button button_change_place;
+
+    @BindView(R.id.button_change_activity)
+            Button button_change_activity;
+
+    @BindView(R.id.city)
+    TextView cityTv;
+
+    @BindView(R.id.insert_name)
+    EditText insert_name_city;
+
+    @OnClick(R.id.button_change_place)
+            void onClick()
+    {
+
+        cityTv.setText(insert_name_city.getText().toString());
+
+    }
+
+    @OnClick(R.id.button_change_activity)
+            void onClick1()
+    {
+        Intent intent = new Intent(this, Main2Activity.class );
+        startActivity(intent);
+
+    }
+
 Bundle bundle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
-        Button button_change_place = (Button) findViewById(R.id.button_change_place);
-        Button button_change_activity = (Button) findViewById(R.id.button_change_activity);
-        button_change_place.setOnClickListener(mListener);
-        button_change_activity.setOnClickListener(mListener);
         bundle = new Bundle();
     }
 
-    public View.OnClickListener mListener = (v) ->
-    {
-
-        switch (v.getId())
-        {
-            case R.id.button_change_place:
-            {
-                TextView city = findViewById(R.id.city);
-                EditText insert_name = findViewById(R.id.insert_name);
-                city.setText(insert_name.getText().toString());
-
-                String newCity = insert_name.getText().toString();
-                bundle.putString("cities", newCity);
-
-                city.setText(newCity);
-                break;
-            }
-            case R.id.button_change_activity:
-            {
-                Intent intent = new Intent(this, Main2Activity.class );
-                startActivity(intent);
-
-                break;
-            }
-        }
-
-
-    };
 
 }
