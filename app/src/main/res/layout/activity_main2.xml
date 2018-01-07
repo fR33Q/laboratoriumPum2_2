@@ -10,27 +10,15 @@
     tools:context="com.example.damian.myapplication.Main2Activity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kliknąłeś w listę miejsc"
-        android:textColor="@android:color/white"/>
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lista aktualnie jest nie dostępna"
-        android:textColor="@android:color/black"/>
+        android:id="@+id/recyclerView">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:id="@+id/wyslane_miasto"/>
+
+    </android.support.v7.widget.RecyclerView>
 
 
 </LinearLayout>
