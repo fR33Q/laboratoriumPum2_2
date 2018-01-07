@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button button_change_place;
 
     @BindView(R.id.button_change_activity)
-            Button button_change_activity;
+    Button button_change_activity;
 
     @BindView(R.id.city)
     TextView cityTv;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.button_change_place)
-            void onClick()
+    void onClick()
     {
 
         cityTv.setText(insert_name_city.getText().toString());

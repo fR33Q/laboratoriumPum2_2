@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="Miasto"
+        android:text="Opis miasta"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="16sp" />

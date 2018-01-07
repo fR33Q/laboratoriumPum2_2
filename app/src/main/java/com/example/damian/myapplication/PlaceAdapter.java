@@ -74,10 +74,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder>{
 
 
 
-
-
-
-
 }
 
 
